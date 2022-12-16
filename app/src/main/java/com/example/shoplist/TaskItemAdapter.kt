@@ -37,7 +37,7 @@ class TaskItemAdapter(val listOfItems: List<String>,
             textView = itemView.findViewById(R.id.text1)
             itemView.setOnLongClickListener {
                 // calling the val on click to delete the this certain position
-                onClickListener.onItemLongClicked(adapterPosition)
+                onClickListener.onItemLongClicked(absoluteAdapterPosition)
                 true
             }
 

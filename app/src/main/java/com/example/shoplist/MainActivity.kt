@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.ImageButton
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.io.File
 import java.io.IOException
 import java.nio.charset.Charset
@@ -62,6 +63,7 @@ class MainActivity : AppCompatActivity() {
         // You will have to override two main methods: one to inflate the view and its view holder,
         // and another one to bind data to the view.
         // look up recycler view in xml file using find view by id
+
         loadItem()
         val recyclerView = findViewById<RecyclerView>(R.id.rView)
         adapter = TaskItemAdapter(listOfTasks, onLongClickListener)
@@ -75,7 +77,7 @@ class MainActivity : AppCompatActivity() {
 
         // going to add implementation to the add button
         //1. call refrecne to add btn using findviewbyid then put code into the set on click listener
-        findViewById<Button>(R.id.Btn).setOnClickListener {
+        findViewById<FloatingActionButton>(R.id.Btn).setOnClickListener {
             // code here will cause the button when clicked to do something
             //Log.i("bruh", "user has clicked the button")
             //1. grab the text user has inputted into editText editText id is @+id/addItem

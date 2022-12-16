@@ -18,31 +18,48 @@
 
         />
 
-    <Button
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/Btn"
-        android:layout_width="109dp"
-        android:layout_height="43dp"
-
-        android:hint="ADD"
+        app:backgroundTint="#E91E63"
+        android:src="@drawable/cart"
+        android:contextClickable="true"
+        android:contentDescription="@string/bottom_sheet_behavior"
+        app:fabSize="mini"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintLeft_toRightOf="@id/addItem"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/addItem"
-        app:layout_constraintHorizontal_bias="0.715"
-
         app:layout_constraintRight_toRightOf="parent"
-
         />
 
     <EditText
         android:id="@+id/addItem"
         android:layout_width="254dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:hint="Add an item"
-        app:layout_constraintTop_toBottomOf="@+id/rView"
+        app:layout_constraintTop_toTopOf="@+id/Btn"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/Btn"
+        app:layout_constraintRight_toRightOf="@+id/Btn"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="688dp" />
+        tools:layout_editor_absoluteY="688dp"
+         />
+<!--    <Button-->
+<!--        android:id="@+id/Btn"-->
+<!--        android:layout_width="109dp"-->
+<!--        android:layout_height="43dp"-->
+
+<!--        android:hint="ADD"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintLeft_toRightOf="@+id/addItem"-->
+<!--        app:layout_constraintHorizontal_bias="0.715"-->
+
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+
+<!--        />-->
+
+
 
 <!--    <ImageButton-->
 <!--        android:id="@+id/imageButton"-->
