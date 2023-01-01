@@ -4,7 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:fitsSystemWindows="true">
+
+<!--    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:fitsSystemWindows="true"-->
+<!--        android:orientation="vertical">-->
+
+<!--        &lt;!&ndash; AppBarLayout is a wrapper for a Toolbar in order to apply scrolling effects. &ndash;&gt;-->
+<!--        &lt;!&ndash; Note that AppBarLayout expects to be the first child nested within a CoordinatorLayout &ndash;&gt;-->
+<!--        <com.google.android.material.appbar.AppBarLayout-->
+<!--            android:id="@+id/appBar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            app:layout_constraintRight_toRightOf="parent">-->
+
+<!--            &lt;!&ndash; Toolbar is the actual app bar with text and the action items &ndash;&gt;-->
+<!--            <androidx.appcompat.widget.Toolbar-->
+<!--                android:id= "@+id/toolbar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="?attr/actionBarSize"-->
+<!--                android:background="?attr/colorPrimary"-->
+<!--                app:layout_scrollFlags="scroll|enterAlways" />-->
+<!--        </com.google.android.material.appbar.AppBarLayout>-->
+
+
+<!--        &lt;!&ndash; Layout for content is here. This can be a RelativeLayout  &ndash;&gt;-->
+
+<!--    </LinearLayout>-->
+    <!-- AppBarLayout is a wrapper for a Toolbar in order to apply scrolling effects. -->
+    <!-- Note that AppBarLayout expects to be the first child nested within a CoordinatorLayout -->
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -15,8 +50,11 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/addItem"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
-        />
+
+
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/Btn"
@@ -45,29 +83,7 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="688dp"
          />
-<!--    <Button-->
-<!--        android:id="@+id/Btn"-->
-<!--        android:layout_width="109dp"-->
-<!--        android:layout_height="43dp"-->
 
-<!--        android:hint="ADD"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintLeft_toRightOf="@+id/addItem"-->
-<!--        app:layout_constraintHorizontal_bias="0.715"-->
-
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-
-<!--        />-->
-
-
-
-<!--    <ImageButton-->
-<!--        android:id="@+id/imageButton"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:srcCompat="@android:drawable/ic_menu_delete" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
