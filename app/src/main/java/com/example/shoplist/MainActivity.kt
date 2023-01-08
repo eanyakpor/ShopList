@@ -8,8 +8,12 @@ import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import android.widget.EditText
+import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -41,6 +45,7 @@ class MainActivity : AppCompatActivity() {
         override fun onItemLongClicked(position: Int) {
             //remove item from list
             listOfTasks.removeAt(position)
+            Toast.makeText(this@MainActivity, "item was deleted", Toast.LENGTH_SHORT).show()
             adapter.notifyDataSetChanged()
             // saveItems()
         }
@@ -49,6 +54,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         // when running call activity main
         // setting content view to xml file
         setContentView(R.layout.activity_main)
@@ -79,6 +85,15 @@ class MainActivity : AppCompatActivity() {
         // and another one to bind data to the view.
         // look up recycler view in xml file using find view by id
         //  loadItem()
+        // creating toast messages to check if both icons are the toolbar are clickable
+        val arrLeft = findViewById<ImageView>(R.id.leftArrow)
+        val menRight = findViewById<ImageView>(R.id.rightMenu)
+        arrLeft.setOnClickListener {
+            Toast.makeText(this,"left arrow was clicked", Toast.LENGTH_SHORT).show()
+        }
+        menRight.setOnClickListener {
+            Toast.makeText(this,"right menu was clicked", Toast.LENGTH_SHORT).show()
+        }
         val recyclerView = findViewById<RecyclerView>(R.id.rView)
         adapter = TaskItemAdapter(listOfTasks, onLongClickListener)
         //Attach the adapter to the recyclerview to populate items
